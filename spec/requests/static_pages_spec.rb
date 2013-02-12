@@ -59,6 +59,8 @@ describe "StaticPages" do
 
   end
 
+  #Contact Page Tests
+
   describe "Contact Page" do
     it "should have the h1 'Contact'" do
       visit '/static_pages/contact'
