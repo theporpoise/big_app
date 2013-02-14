@@ -12,9 +12,11 @@
     <div class="container">
     	<%= yield %>
     	<%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
 
-
+<!--
 <iframe style="border-width: 0px; border-style: none;" height="130" width="430" src="https://curebit.com/x/WuMle" frameborder="0" scrolling="no"/>
+-->
 </body>
 </html>
