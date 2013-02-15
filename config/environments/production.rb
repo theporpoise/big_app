@@ -33,6 +33,12 @@ BigApp::Application.configure do
   # See everything in the log (default is :info)
   # config.log_level = :debug
 
+  #
+  ##  THIS IS STUFF I ADDED IN AS PART OF THE TUTORIAL
+  #
+config.force_ssl = true
+
+
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
 
