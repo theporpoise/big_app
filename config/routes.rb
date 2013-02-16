@@ -1,10 +1,26 @@
 BigApp::Application.routes.draw do
+  #Defining routes for the users and sessions controllers
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
+
+  #Home Page
   root to: 'static_pages#home'
 
+  ##Matching the signup route to the users controller action new
   match '/signup', to: 'users#new'
+  #
+  ##Matching routes to sessions controller
+  #
+  match '/signin', to: 'sessions#new'
+  
+  match '/signout', to: 'sessions#destroy', via: :delete
+  #The via: :delete here specifies that it should be invoked using
+  #the HTTP DELETE request.
 
+  #
+  ## Matching the routes to the static pages controller
+  #
   match '/help',    to: 'static_pages#help'
 
   match '/about',   to: 'static_pages#about'
