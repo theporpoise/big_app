@@ -2,6 +2,8 @@ BigApp::Application.routes.draw do
   #Defining routes for the users and sessions controllers
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
+  
 
 
   #Home Page
