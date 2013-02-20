@@ -1,3 +1,16 @@
+<% if signed_in? %>
+	<div class="row">
+		<aside class="span4">
+			<section>
+				<%= render 'shared/user_info' %>
+			</section>
+			<section>
+				<%= render 'shared/micropost_form' %>
+			</section>
+		</aside>
+	</div>
+<% else %>
+
 
 <div class="center hero-unit">
 
@@ -16,5 +29,6 @@
       doing a little bit of addition, 1 + 1 = 
       <%= 1 + 1 =%>
 	</p> 
-
+	
+<% end %>
 
