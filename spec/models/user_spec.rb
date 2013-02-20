@@ -31,7 +31,7 @@ describe User do
   it { should respond_to(:authenticate) }
   it { should respond_to(:remember_token) }
   it { should respond_to(:microposts) }
-  it { should respont_to(:feed) }
+  it { should respond_to(:feed) }
 
   it {should be_valid }
   it {should_not be_admin }
@@ -60,7 +60,7 @@ describe User do
     end
 
     describe "status" do
-      let(:unfollower_post) do
+      let(:unfollowed_post) do
         FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
       end
 
