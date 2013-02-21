@@ -38,7 +38,7 @@ describe User do
   it { should respond_to(:follow!) }
   it { should respond_to(:unfollow!) }
   it { should respond_to(:reverse_relationships) }
-  it { shoudl respond_to(:followers) }
+  it { should respond_to(:followers) }
 
   it {should be_valid }
   it {should_not be_admin }
