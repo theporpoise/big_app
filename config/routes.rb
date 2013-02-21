@@ -1,6 +1,11 @@
 BigApp::Application.routes.draw do
   #Defining routes for the users and sessions controllers
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   
